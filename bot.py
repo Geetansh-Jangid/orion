@@ -12,6 +12,8 @@ from flask import Flask
 from dotenv import load_dotenv
 import threading
 
+PORT = int(os.getenv("PORT", 8080))  
+app = Flask(__name__)
 # --- Load Environment Variables ---
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
