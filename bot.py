@@ -7,6 +7,10 @@ from discord import app_commands
 from dotenv import load_dotenv
 import asyncio
 import io
+from threading import Thread
+from flask import Flask
+from dotenv import load_dotenv
+import threading
 
 # --- Load Environment Variables ---
 load_dotenv()
@@ -233,4 +237,10 @@ async def on_message(message):
             conversation_history[channel_id].pop()
 
 # --- Run the Bot ---
+def run_flask():
+    app.run(debug=False, host='0.0.0.0', port=PORT)
+
+flask_thread = threading.Thread(target=run_flask)
+flask_thread.daemon = True  # Allow the main thread to exit even if the Flask thread is running
+flask_thread.start()
 discord_client.run(DISCORD_TOKEN)
