@@ -2,3 +2,4 @@ google-genai
 ipython
 discord
 python-dotenv
+Flask
