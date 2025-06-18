@@ -14,6 +14,13 @@ import threading
 
 PORT = int(os.getenv("PORT", 8080))  
 app = Flask(__name__)
+@app.route('/')
+def home():
+    return "Booted Jarvis!"
+
+@app.route('/health')
+def health():
+    return "OK", 200
 # --- Load Environment Variables ---
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
