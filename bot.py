@@ -16,7 +16,7 @@ PORT = int(os.getenv("PORT", 8080))
 app = Flask(__name__)
 @app.route('/')
 def home():
-    return "Booted Jarvis!"
+    return "Booted Orion!"
 
 @app.route('/health')
 def health():
@@ -31,7 +31,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 # ===============================================================
 
 client = genai.Client(api_key=GEMINI_API_KEY)
-MODEL_ID="gemini-2.5-flash-preview-05-20"
+MODEL_ID="gemini-2.5-flash"
 
 SYSTEM_INSTRUCTION = """you are a friendly chatbot which always answer in a very consise way by answering only what is asked
 you must search the web to answer each and every question
