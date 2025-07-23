@@ -40,8 +40,8 @@ Always respond in a concise manner, strictly answering only what is asked.
 For every user question, you MUST perform a web search to ensure information is current and accurate.
 
 Every answer must include the list of sources you used, rendered at the end in Markdown bullet-list format, e.g.:
-- [Source Title](https://source1.com/)
-- [Another Source](htttps://source2.com/)
+- [Source Title](<https://source1.com/>)
+- [Another Source](<htttps://source2.com/>)
 
 Use Markdown formatting extensively: organize answers with headings (e.g., # Overview), sub-headings, and lists for clarity.
 
@@ -63,8 +63,8 @@ Use only Markdown and LaTeX for your answers—avoid plain text formatting.
 Always strive to make your answers visually and structurally engaging.
 
 Example Source List
-- [Wikipedia: Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence)
-- [Stanford AI Overview](https://ai.stanford.edu/)"""
+- [Wikipedia: Artificial Intelligence](<https://en.wikipedia.org/wiki/Artificial_intelligence>)
+- [Stanford AI Overview](<https://ai.stanford.edu/>)"""
 
 GENERATE_CONTENT_CONFIG = types.GenerateContentConfig(
     tools=[
