@@ -31,7 +31,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 # ===============================================================
 
 client = genai.Client(api_key=GEMINI_API_KEY)
-MODEL_ID="gemini-2.5-flash"
+MODEL_ID="gemini-2.5-flash-lite"
 
 SYSTEM_INSTRUCTION = """you are a friendly chatbot which always answer in a very consise way by answering only what is asked
 you must search the web to answer each and every question
